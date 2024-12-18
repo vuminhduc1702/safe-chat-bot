@@ -1,6 +1,7 @@
 import readline from "readline";
 import { generateResponse } from "./lib/message";
 import { config } from "./config";
+import { log } from "./lib/log";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -29,9 +30,14 @@ export const startChatBot = async () => {
       console.log(config.MESSAGE.EXIT);
       break;
     }
+
+    log(`UserId: ${userId}`, message);
+
     const response = generateResponse(message);
 
     console.log(response);
+
+    log("CHATBOT", response);
   }
   rl.close();
 };
