@@ -29,6 +29,9 @@ export const startChatBot = async () => {
       console.log(config.MESSAGE.EXIT);
       break;
     }
+    const response = generateResponse(message);
+
+    console.log(response);
   }
   rl.close();
 };
