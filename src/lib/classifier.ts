@@ -4,7 +4,6 @@ import { config } from "../config";
 const classifier = new natural.BayesClassifier();
 
 const DATA_TRAINING = [
-  ["stupid", "1"],
   ["You're brilliant!", "0"],
   ["I admire your work", "0"],
   ["Hello", "0"],

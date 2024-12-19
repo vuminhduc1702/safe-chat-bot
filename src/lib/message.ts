@@ -1,8 +1,12 @@
 import { config } from "../config";
 import * as profanity from "./profanity";
-import * as classifier from "./classifier";
 
+/**
+ * Generate chatbot response
+ * @param message - user's input
+ */
 export const generateResponse = (message: string) => {
+  // const result = profanity.detectDisallowedContent(message);
   const result = profanity.detectDisallowedContent(message);
 
   const response = result
