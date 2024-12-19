@@ -18,11 +18,14 @@ const DISALLOWED_WORDS = [
 
 // const ENABLE_CLASSIFIER = true;
 
-const LOG_FILE = "./src/logger/chat_log.txt";
+const LOG_FILE = "./src/logs/chatbot_log.txt";
+
+const TEST_LOG_FILE = "./src/logs/test_chatbot_log.txt";
 
 export const config = {
   MESSAGE,
   DISALLOWED_WORDS,
   //   ENABLE_CLASSIFIER,
   LOG_FILE,
+  TEST_LOG_FILE,
 };

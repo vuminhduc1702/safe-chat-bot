@@ -119,3 +119,31 @@ describe("Chatbot response tests", () => {
     expect(result).toBe("I'm sorry, but I can't assist with that request.");
   });
 });
+// import { describe, it, expect, vi } from "vitest";
+// import { generateResponse } from "../message";
+// import { config } from "../../config";
+// import { profanity } from "../profanity";
+
+// describe("generateResponse", () => {
+//   it("should return disallowed message when profanity is detected", () => {
+//     profanity.detectDisallowedContent.mockReturnValue(true);
+
+//     const message = "some inappropriate content";
+//     const response = generateResponse(message);
+
+//     expect(response).toBe(config.MESSAGE.RESPONSE_DISALLOWED_CONTENT);
+//     expect(profanity.detectDisallowedContent).toHaveBeenCalledWith(message);
+//   });
+
+//   it("should return allowed message with the input when no profanity is detected", () => {
+//     profanity.detectDisallowedContent.mockReturnValue(false);
+
+//     const message = "some clean content";
+//     const response = generateResponse(message);
+
+//     expect(response).toBe(
+//       `${config.MESSAGE.RESPONSE_ALLOWED_CONTENT}${message}`
+//     );
+//     expect(profanity.detectDisallowedContent).toHaveBeenCalledWith(message);
+//   });
+// });
